@@ -93,7 +93,8 @@ export class PokemonService {
     const { deletedCount } = await this.pokemonModel.deleteOne({ _id: id });
 
     if (deletedCount === 0)
-      throw new BadRequestException(`Pokemon with id "${id}" not found`);
+      throw new BadRequestException(
+    );
     return;
 
   }
