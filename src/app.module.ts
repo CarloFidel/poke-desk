@@ -14,14 +14,14 @@ import { joiValidationSchema } from './config/joi.validation';
   imports: [
     ConfigModule.forRoot({
       load: [EnvConfiguration],
-      validationSchema: joiValidationSchema
+      validationSchema: joiValidationSchema,
     }),
 
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
     }),
     MongooseModule.forRoot(process.env.MONGODB!, {
-      dbName: 'pokemonsdb'
+      dbName: 'pokemonsdb',
     }),
     PokemonModule,
     CommonModule,
